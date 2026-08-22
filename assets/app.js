@@ -32,4 +32,7 @@
       a.addEventListener("click", function () { toggle.checked = false; });
     });
   }
+
+  // 이 파일이 정상 실행됐음을 알림 — 실행되지 않으면 head의 예비 코드가 본문을 드러냄
+  window.__gsjReady = true;
 })();

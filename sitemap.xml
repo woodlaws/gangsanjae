@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://REPLACE-WITH-YOUR-DOMAIN/</loc>
+    <loc>https://gangsanjae.vercel.app/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://REPLACE-WITH-YOUR-DOMAIN/space</loc>
+    <loc>https://gangsanjae.vercel.app/space</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://REPLACE-WITH-YOUR-DOMAIN/healing</loc>
+    <loc>https://gangsanjae.vercel.app/healing</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://REPLACE-WITH-YOUR-DOMAIN/info</loc>
+    <loc>https://gangsanjae.vercel.app/info</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

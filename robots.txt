@@ -9,4 +9,4 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 
-Sitemap: https://REPLACE-WITH-YOUR-DOMAIN/sitemap.xml
+Sitemap: https://gangsanjae.vercel.app/sitemap.xml

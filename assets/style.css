@@ -152,10 +152,9 @@ html.js .reveal.in { opacity: 1; transform: none; }
 .nav-toggle, .nav-btn { display: none; }
 
 /* --- 히어로 -------------------------------------------------------------- */
-.hero { position: relative; height: 100vh; min-height: 680px; overflow: hidden; }
-.hero-media { position: absolute; inset: 0; }
-.hero-media img { width: 100%; height: 100%; object-fit: cover; animation: kenburns 22s var(--ease) forwards; }
-@keyframes kenburns { from { transform: scale(1.12); } to { transform: scale(1); } }
+.hero { position: relative; height: 100vh; min-height: 680px; overflow: hidden; background: #14120f; }
+.hero-media { position: absolute; inset: 0; background: #14120f; }
+.hero-media img { width: 100%; height: 100%; object-fit: cover; }
 .hero-scrim {
   position: absolute; inset: 0;
   background:
@@ -516,7 +515,7 @@ html.js .reveal.in { opacity: 1; transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
-  .reveal { opacity: 1; transform: none; }
+  html.js .reveal, html.js .reveal.in { opacity: 1; transform: none; }
   html { scroll-behavior: auto; }
 }
 
@@ -525,23 +524,27 @@ html.js .reveal.in { opacity: 1; transform: none; }
    ========================================================================== */
 
 /* --- 히어로 슬라이드쇼 --------------------------------------------------- */
+/* 첫 장은 기본값으로 항상 보입니다. 애니메이션이 꺼지는 환경
+   (OS의 '동작 줄이기' 설정 등)에서도 히어로가 비지 않도록 하기 위함입니다. */
 .hero-media .slide {
   position: absolute; inset: 0; opacity: 0;
   animation: heroFade 21s infinite;
 }
+.hero-media .slide:first-child { opacity: 1; }
 .hero-media .slide img {
   width: 100%; height: 100%; object-fit: cover;
   animation: kenburns 21s var(--ease) infinite;
 }
+/* 음수 지연으로 세 장이 처음부터 같은 주기 위에 놓입니다 (1 → 2 → 3 순환) */
 .hero-media .slide:nth-child(1), .hero-media .slide:nth-child(1) img { animation-delay: 0s; }
-.hero-media .slide:nth-child(2), .hero-media .slide:nth-child(2) img { animation-delay: 7s; }
-.hero-media .slide:nth-child(3), .hero-media .slide:nth-child(3) img { animation-delay: 14s; }
+.hero-media .slide:nth-child(2), .hero-media .slide:nth-child(2) img { animation-delay: -14s; }
+.hero-media .slide:nth-child(3), .hero-media .slide:nth-child(3) img { animation-delay: -7s; }
 @keyframes heroFade {
-  0%   { opacity: 0; }
-  4%   { opacity: 1; }
-  30%  { opacity: 1; }
-  36%  { opacity: 0; }
-  100% { opacity: 0; }
+  0%   { opacity: 1; }
+  28%  { opacity: 1; }
+  35%  { opacity: 0; }
+  93%  { opacity: 0; }
+  100% { opacity: 1; }
 }
 @keyframes kenburns { from { transform: scale(1.10); } to { transform: scale(1.0); } }
 
