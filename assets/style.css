@@ -319,6 +319,11 @@ html.js .reveal.in { opacity: 1; transform: none; }
 .card { display: flex; flex-direction: column; gap: 16px; }
 .card .fig, .card .ph { height: 230px; }
 .card h3 { font-size: 18px; letter-spacing: .03em; }
+/* 주변 관광지 카드 */
+.spot .body { display: flex; flex-direction: column; gap: 8px; }
+.spot h3 { font-size: 19px; }
+.spot .desc { font-size: 15px; font-weight: 300; color: var(--body); text-wrap: pretty; }
+.spot .who { font-size: 13px; color: #8c8375; letter-spacing: .02em; }
 .card.lined .body { display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 1px solid var(--ink); }
 .card.lined h3 { font-size: 21px; }
 .card.lined p { font-size: 15px; color: var(--body); text-wrap: pretty; }
