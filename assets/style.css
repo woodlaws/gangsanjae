@@ -548,6 +548,11 @@ html.js .reveal.in { opacity: 1; transform: none; }
 }
 @keyframes kenburns { from { transform: scale(1.10); } to { transform: scale(1.0); } }
 
+/* --- 소개 영상 ----------------------------------------------------------- */
+/* aspect-ratio 로 16:9 유지 — 어떤 화면 폭에서도 검은 여백 없이 꽉 찹니다 */
+.video { position: relative; aspect-ratio: 16 / 9; background: #14120f; overflow: hidden; }
+.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+
 /* --- 하루의 시간 --------------------------------------------------------- */
 .hours { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .hour { position: relative; overflow: hidden; height: 620px; }
