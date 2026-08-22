@@ -354,7 +354,11 @@ html.js .reveal.in { opacity: 1; transform: none; }
 .spec > div { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 24px; padding: 26px 0; border-bottom: 1px solid var(--line); font-size: 16px; }
 .spec dt { color: var(--muted); letter-spacing: .04em; }
 .spec dd { margin: 0; }
-.map { height: 440px; margin-bottom: 44px; }
+/* 오시는 길 지도 — 카카오 정적 지도는 SCALE=2.5 로 받으므로 폭 1260px 까지 선명합니다 */
+.map { margin-bottom: 26px; border: 1px solid var(--line-dark); overflow: hidden; }
+.map a { display: block; line-height: 0; }
+.map img { width: 100%; height: auto; display: block; }
+.map-links { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 44px; }
 .access { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px; margin-bottom: 64px; }
 .access > div { display: flex; flex-direction: column; gap: 12px; padding-top: 26px; border-top: 1px solid var(--ink); }
 .access h3 { font-size: 20px; }
@@ -498,7 +502,8 @@ html.js .reveal.in { opacity: 1; transform: none; }
 
   .rate { padding: 30px 26px; }
   .spec > div { grid-template-columns: 1fr; gap: 4px; padding: 18px 0; }
-  .map { height: 260px; }
+  .map-links { gap: 10px; }
+  .map-links .btn { flex: 1 1 100%; }
 
   .footer { padding: 52px 22px 40px; }
   .footer-top { flex-direction: column; gap: 28px; }
